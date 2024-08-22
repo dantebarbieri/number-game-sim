@@ -15,6 +15,8 @@ public:
 
     const std::size_t len;
 
+    std::size_t completed() const;
+
     friend std::ostream& operator<<(std::ostream& os, const game& g);
 
 private:

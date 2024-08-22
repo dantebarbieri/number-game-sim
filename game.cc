@@ -21,6 +21,17 @@ game::gameover game::play(int& last_value)
     return gameover.value();
 }
 
+std::size_t game::completed() const
+{
+    std::size_t counter = 0;
+    
+    for (int i = 0; i < len; ++i)
+    {
+        counter += buffer[i].has_value();
+    }
+
+    return counter;
+}
 
 bool game::check_win() const
 {
